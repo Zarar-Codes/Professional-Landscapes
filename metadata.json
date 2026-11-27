@@ -1,0 +1,6 @@
+{
+  "name": "Professional Landscapes",
+  "description": "Experienced UK landscaping team with over 25 years crafting natural stone and porcelain patios, block paving driveways, brickwork, decking, pergolas, and complete garden improvements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

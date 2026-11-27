@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+/*
+ * BRAND COLOUR PALETTE — PROFESSIONAL LANDSCAPES
+ * ---------------------------------------------------------------------------
+ * Confirmed Brand Colours (extracted directly from prolandscapesuk.com & official logo):
+ *   --pl-teal-primary:   #579091  (rgb(87, 144, 145) — verified hero/header CSS .c1-h)
+ *   --pl-teal-secondary: #569092  (rgb(86, 144, 146) — verified secondary CSS .c1-48)
+ *   --pl-teal-logo:      #39A097  (rgb(57, 160, 151) — sampled from PL-Logo-for-dark-green.png)
+ *   --pl-pine-logo:      #294D4A  (rgb(41, 77, 74)   — sampled from logo "PROFESSIONAL" wordmark)
+ *   --pl-teal-cadet:     #5F9EA0  (verified CSS .c1-8q highlight)
+ *   --pl-teal-border:    #68ACAE  (rgb(104, 172, 174) — verified CSS .c1-83)
+ *   --pl-charcoal-bg:    #141414  (rgb(20, 20, 20)    — verified dark surface CSS .c1-6o)
+ *   --pl-offwhite-text:  #F5F5F5  (rgb(245, 245, 245) — verified light text CSS .c1-6r)
+ *
+ * Proposed Complementary Neutrals (introduced for editorial legibility & spaciousness):
+ *   --pl-canvas-light:   #F7F6F2  (warm natural stone off-white, <5% saturation)
+ *   --pl-surface-stone:  #EFECE5  (soft limestone structural surface)
+ *   --pl-ink-deep:       #172625  (high-contrast slate ink harmonised with logo #294D4A)
+ *   --pl-ink-muted:      #4B5B59  (accessible secondary prose ink on light canvas)
+ */
+
+:root {
+  --pl-teal-primary: #579091;
+  --pl-teal-secondary: #569092;
+  --pl-teal-logo: #39a097;
+  --pl-pine-logo: #294d4a;
+  --pl-teal-cadet: #5f9ea0;
+  --pl-teal-border: #68acae;
+  --pl-charcoal-bg: #141414;
+  --pl-offwhite-text: #f5f5f5;
+
+  --pl-canvas-light: #f7f6f2;
+  --pl-surface-stone: #efece5;
+  --pl-ink-deep: #172625;
+  --pl-ink-muted: #4b5b59;
+  --pl-hairline: rgba(41, 77, 74, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--pl-canvas-light);
+  color: var(--pl-ink-deep);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
